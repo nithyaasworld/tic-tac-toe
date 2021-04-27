@@ -1,4 +1,4 @@
-import Square from "./Square.jsx";
+import Square from "../Square/Square.jsx";
 import { useState } from "react";
 import "./board.css";
 export default function Board(props) {
