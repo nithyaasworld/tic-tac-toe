@@ -4,12 +4,11 @@
     box-sizing: border-box;
 }
 .board{
-    margin: 5em;
+    margin: 5em auto;
     text-align: center;
-}
-.row1, .row2, .row3{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    width: 160px;
 }
 .game-stats {
     width: 200px;

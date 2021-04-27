@@ -55,22 +55,8 @@ export default function Board(props) {
         <p>Current Turn: {currentPlayer}</p>
         <p>Game State: {gameState}</p>
       </div>
-      <div className="board" style={{pointerEvents: gameState !== 'In Progress' ? 'none' : 'auto'}}>
-        <div className="row1">
-          <Square value={squares[0]} index={0} clickHandler={clickHandler} gameState = {gameState} />
-          <Square value={squares[1]} index={1} clickHandler={clickHandler} gameState = {gameState} />
-          <Square value={squares[2]} index={2} clickHandler={clickHandler} gameState = {gameState} />
-        </div>
-        <div className="row2">
-          <Square value={squares[3]} index={3} clickHandler={clickHandler} gameState = {gameState} />
-          <Square value={squares[4]} index={4} clickHandler={clickHandler} gameState = {gameState} />
-          <Square value={squares[5]} index={5} clickHandler={clickHandler} gameState = {gameState} />
-        </div>
-        <div className="row3">
-          <Square value={squares[6]} index={6} clickHandler={clickHandler} gameState = {gameState} />
-          <Square value={squares[7]} index={7} clickHandler={clickHandler} gameState = {gameState} />
-          <Square value={squares[8]} index={8} clickHandler={clickHandler} gameState = {gameState} />
-        </div>
+      <div className="board" style={{ pointerEvents: gameState !== 'In Progress' ? 'none' : 'auto' }}>
+        {squares.map((cell, i) => <Square value={cell} index={i} clickHandler={clickHandler} gameState={gameState} />)}
       </div>
     </>
   );
